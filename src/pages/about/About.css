@@ -1,0 +1,332 @@
+.about-text-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 70px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.about{
+    margin-top: 120px;
+}
+
+.about-p{
+    width: 460px;
+    line-height: 27px;
+    font-weight: 500;
+}
+
+.about-title{
+    width: 320px;
+}
+
+.about-title h3{
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.about-title h3 span{
+    color: rgba(255, 183, 0, 0.841);
+    text-decoration: underline;
+}
+
+.about-img{
+    width: 95%;
+    margin-left: 15px;
+    margin-right: 25px;
+    margin-bottom: 30px;
+}
+
+.about-img img{
+    width: 100%;
+}
+
+.about-img-text{
+    margin-left: 15px;
+    margin-right: 15px;
+    line-height: 30px;
+}
+
+.about-bottom{
+    margin-top: 100px;
+}
+
+.about-wrapper1, .about-wrapper2{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: 15px;
+    margin-right: 15px;
+    gap: 40px;
+}
+
+.story, .explorer, .cameraman, .learn{
+    width: 500px;
+}
+
+.learn{
+    margin-top: 35px;
+}
+
+.about-photo{
+    width: 100%;
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-right: 15px;
+    gap: 15px;
+    background-color: #EDEDED;
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+
+.customer-text{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 70px;
+    margin-top: 50px;
+    margin-left: 25px;
+    margin-right: 35px;
+}
+
+.customer-p{
+    width: 470px;
+}
+
+.customer-title{
+    width: 200px;
+}
+
+.customer-title h3{
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.customer-title h3 span{
+    color: rgba(255, 183, 0, 0.841);
+    text-decoration: underline;
+}
+
+.about-cards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    margin-bottom: 120px;
+}
+
+.about-cards .card{
+    width: 300px;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 15px;
+    border: none;
+    box-shadow: 0 0 20px rgb(191, 191, 191);
+    border-radius: 15px;
+}
+
+.about-cards .card p{
+    width: 220px;
+    line-height: 30px;
+}
+
+.about-cards .card h3{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.learn-title2{
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+
+@media screen and (max-width: 1023px) {
+    .about-photo img{
+        width: 150px;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 1088px) {
+    .about-cards{
+        gap: 30px;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .about-cards{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+@media screen and (max-width: 800px) {
+    .about-photo img{
+        width: 110px;
+        height: auto;
+    }
+}
+@media screen and (max-width: 615px) {
+    .about-photo img{
+        width: 90px;
+        height: auto;
+    }
+}
+@media screen and (max-width: 500px) {
+    .about-photo img{
+        width: 70px;
+        height: auto;
+    }
+}
+
+
+@media screen and (max-width: 881px) {
+    .about-wrapper1, .about-wrapper2{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .story, .explorer, .cameraman, .learn{
+        width: 100%;
+    }
+
+    .explorer{
+        margin-bottom: 35px;
+    }
+
+    .learn{
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 828px) {
+    .about-text-wrap{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about-title{
+        margin-bottom: 30px;
+    }
+
+    .about-p{
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media screen and (max-width: 792px){
+    .customer-text{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .customer-title{
+        margin-bottom: 30px;
+    }
+
+    .customer-p{
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+.info-wrapper .img-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-wrap {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 10px 0;
+    scrollbar-width: none;
+    -ms-overflow-style: none; 
+  }
+
+  .img-wrap::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .img-wrap img {
+    flex: 0 0 auto;
+    width: 170px;
+    height: auto;
+    object-fit: cover;
+  }
+  
+
+  @media screen and (max-width: 768px) {
+    .img-wrap img {
+      width: 120px;
+    }
+
+    .input-wrap{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .input-text{
+        margin-bottom: 35px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .img-wrap img {
+      width: 100px;
+    }
+  }
+
+.input-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 50px;
+    margin-top: 70px;
+}
+
+.input-text h3{
+    font-size: 21px;
+}
+
+.input-text{
+    width: 300px;
+}
+
+.input-text h3 span{
+    color: #0336FF;
+}
+
+.input-wrap .input input{
+    padding: 13px 15px;
+    border: 1px solid rgb(197, 197, 197);
+    border-radius: 5px;
+    transition: all 0.1s ease;
+}
+
+.input-wrap .input input:focus{
+    outline: none;
+    border: 1px solid #0336FF;
+    box-shadow: 0 0 1px 0 #0336FF;
+}
+
+.input{
+    display: flex;
+    gap: 10px;
+}
+
+.input-wrap .input button{
+    border: none;
+    background-color: #0336FF;
+    padding: 14px 26px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
