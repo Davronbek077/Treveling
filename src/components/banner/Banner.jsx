@@ -309,7 +309,7 @@ const Banner = () => {
           </div>
 
           <div className="beach-wrapper">
-            <div className="beach">
+            <div className="beach" style={{height: "550px"}}>
             <div className="trevel-img">
               <img id='beach-img' src={beach} alt="" />
             </div>
@@ -345,7 +345,7 @@ const Banner = () => {
             </div>
             </div>
 
-            <div id='beach2' className="beach">
+            <div id='beach2' className="beach" style={{height: "550px"}}>
             <div className="trevel-img">
               <img src={city} alt="" />
             </div>
@@ -437,7 +437,7 @@ const Banner = () => {
           </div>
 
           <div className="beach-wrapper castle">
-            <div id='globus' className="beach">
+            <div id='globus' className="beach" style={{height: "550px"}}>
             <div className="trevel-img">
               <img src={globus} alt="" />
             </div>
@@ -473,7 +473,7 @@ const Banner = () => {
             </div>
             </div>
 
-            <div id='beach2' className="beach">
+            <div id='beach2' className="beach" style={{height: "550px"}}>
             <div className="trevel-img">
               <img src={tree} alt="" />
             </div>
@@ -511,7 +511,7 @@ const Banner = () => {
           </div>
 
           <div className="beach-wrapper castle japan">
-            <div id='globus' className="beach">
+            <div id='globus' className="beach" style={{height: "550px"}}>
             <div className="trevel-img">
               <img src={towers} alt="" />
             </div>
@@ -547,7 +547,7 @@ const Banner = () => {
             </div>
             </div>
 
-            <div id='beach2' className="beach">
+            <div id='beach2' className="beach" style={{height: "550px"}}>
             <div className="trevel-img">
               <img src={animal} alt="" />
             </div>
@@ -631,7 +631,7 @@ const Banner = () => {
           </div>
 
           <div className="beach-wrapper">
-            <div className="beach">
+            <div className="beach" style={{height: "550px"}}>
             <div className="trevel-img">
               <img src={beach} alt="" />
             </div>
@@ -667,7 +667,7 @@ const Banner = () => {
             </div>
             </div>
 
-            <div id='beach2' className="beach">
+            <div id='beach2' className="beach" style={{height: "550px"}}>
             <div className="trevel-img">
               <img src={city} alt="" />
             </div>
