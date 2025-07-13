@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import './Navbar.css'
 import Logo from "../../assets/Logo.png"
 import Navicon from "../../assets/navicon.png"
+import Sidebar from '../../sidebar/Sidebar'
 
 import homeBg from "../../assets/banner.png"
 import aboutBg from "../../assets/aboutLogo.png"
@@ -13,6 +14,16 @@ import contactBg from "../../assets/contact.png"
 const Navbar = () => {
   const location = useLocation(); 
   const currentPath = location.pathname;
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const toggleSidebar = () => setSidebarOpen(!sidebarOpen);
+  const closeSidebar = () => setSidebarOpen(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 600);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 600);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const bgMap = {
     "/": homeBg,
@@ -29,18 +40,10 @@ const Navbar = () => {
       title3: "over the world",
       button: "Read More"
     },
-    "/about": {
-      title4: "About us",
-    },
-    "/destination": {
-      title4: "Destination",
-    },
-    "/tips": {
-      title4: "Travel Tips",
-    },
-    "/contact": {
-      title4: "Contact",
-    }
+    "/about": { title4: "About us" },
+    "/destination": { title4: "Destination" },
+    "/tips": { title4: "Travel Tips" },
+    "/contact": { title4: "Contact" }
   };
 
   const backgroundImage = bgMap[currentPath] || homeBg;
@@ -50,30 +53,45 @@ const Navbar = () => {
     <div className='navbar' style={{
       backgroundImage: `url(${backgroundImage})`,
       backgroundSize: "cover",
+      backgroundRepeat: "no-repeat",
       backgroundPosition: "center",
       width: "100%",
-      height: "90vh",
+      height: isMobile ? "60vh" : "90vh",
     }}>
+
+      <div className="navbar-list">
+      <div className="menu-icon" onClick={toggleSidebar}>
+        ☰
+      </div>
+
+      <Sidebar isOpen={sidebarOpen} closeSidebar={closeSidebar} />
+
       <div className="container">
         <div className="logo">
           <img src={Logo} alt="logo" />
         </div>
-
         <nav>
           <ul>
-            <li><Link to={"/"}>Home</Link></li>
-            <li><Link to={"/about"}>About Us</Link></li>
-            <li><Link to={"/destination"}>Destination</Link></li>
-            <li><Link to={"/tips"}>Tips</Link></li>
-            <li><Link to={"/contact"}>Contact</Link></li>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/about">About Us</Link></li>
+            <li><Link to="/destination">Destination</Link></li>
+            <li><Link to="/tips">Tips</Link></li>
+            <li><Link to="/contact">Contact</Link></li>
           </ul>
         </nav>
       </div>
+      </div>
 
       <div className="navbar-text-wrap" style={{
-      marginTop: currentPath === "/" ? "80px" : "200px",
-      textAlign: "center",
-    }}>
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: isMobile ? "center" : "center",
+        height: isMobile ? "70%" : "70%",
+        marginTop: currentPath === "/" ? "60px" : "30px",
+        textAlign: "center",
+      }}>
+
         <div className="navbar-text">
           {pageText.title1 && <h3>{pageText.title1}</h3>}
           {pageText.title2 && <h2>{pageText.title2}</h2>}
@@ -82,20 +100,20 @@ const Navbar = () => {
         </div>
 
         {currentPath === "/" && pageText.button && (
-    <div className="navbar-btn">
-      <a href="#">{pageText.button}</a>
-    </div>
-  )}
+          <div className="navbar-btn">
+            <a href="#">{pageText.button}</a>
+          </div>
+        )}
 
-{currentPath === "/" && (
-    <div className="navbar-down">
-      <p>Scroll Down to Continue</p>
-      <img src={Navicon} alt="" />
-    </div>
-  )}
+        {currentPath === "/" && (
+          <div className="navbar-down">
+            <p>Scroll Down to Continue</p>
+            <img src={Navicon} alt="" />
+          </div>
+        )}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

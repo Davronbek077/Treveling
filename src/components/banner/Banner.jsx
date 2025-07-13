@@ -25,8 +25,15 @@ import info2 from "../../assets/desfooter2.png"
 import info3 from "../../assets/desfooter3.png"
 import info4 from "../../assets/desfooter4.png"
 import info5 from "../../assets/desfooter5.png"
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/autoplay';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 const Banner = () => {
+  
   return (
     <div className='banner'>
       <div className="container">
@@ -197,6 +204,7 @@ const Banner = () => {
             </div>
 
             <div className="touchs">
+            <a href="https://www.facebook.com/">
             <div id='facebook' className="touch">
               <div className="touch-img">
                 <img id='face' src={facebook} alt="" />
@@ -207,7 +215,9 @@ const Banner = () => {
               <p>Likes</p>
               </div>
             </div>
+            </a>
             
+            <a href="https://x.com/">
             <div id='twitter' className="touch">
               <div className="touch-img">
                 <img src={twitter} alt="" />
@@ -218,8 +228,10 @@ const Banner = () => {
               <p>Followers</p>
               </div>
             </div>
+            </a>
             </div>
             <div className="touchs">
+            <a href="https://www.youtube.com/">
             <div id='youtube'  className="touch">
               <div className="touch-img">
                 <img id='you' src={youtube} alt="" />
@@ -230,7 +242,9 @@ const Banner = () => {
               <p>Subscribers</p>
               </div>
             </div>
+            </a>
 
+            <a href="https://www.instagram.com/">
             <div id='instagram' className="touch">
               <div className="touch-img">
                 <img id='insta' src={instagram} alt="" />
@@ -241,6 +255,7 @@ const Banner = () => {
               <p>Followers</p>
               </div>
             </div>
+            </a>
             </div>
 
           </div>
@@ -249,7 +264,15 @@ const Banner = () => {
         <div className="blog-right">
           <div className="trevel-wrap">
             <div className="trevel-img">
-              <img src={road} alt="" />
+            <iframe
+      width="100%"
+      height="455"
+      src="https://www.youtube.com/embed/htqd5aGB7FY?si=tsL3arlB3Swg6P8r"
+      title="YouTube video player"
+      frameBorder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowFullScreen
+    ></iframe>
             </div>
 
             <div className="trevel-text">
@@ -361,7 +384,15 @@ const Banner = () => {
 
           <div className="trevel-wrap nature">
             <div className="trevel-img">
-              <img src={wild} alt="" />
+            <iframe
+      width="100%"
+      height="455"
+      src="https://www.youtube.com/embed/VFJPYlqpgeU?si=0ChtKvKkjh8tFe7d"
+      title="YouTube video player"
+      frameBorder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowFullScreen
+    ></iframe>
             </div>
 
             <div className="trevel-text">
@@ -555,7 +586,15 @@ const Banner = () => {
 
           <div className="trevel-wrap nature">
             <div className="trevel-img">
-              <img src={wild} alt="" />
+            <iframe
+      width="100%"
+      height="455"
+      src="https://www.youtube.com/embed/C0gOmA7EOfs?si=Q0HmSo7K0cQOm-0q"
+      title="YouTube video player"
+      frameBorder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowFullScreen
+    ></iframe>
             </div>
 
             <div className="trevel-text">
@@ -669,25 +708,63 @@ const Banner = () => {
       </div>
 
       <div className="info-wrapper">
-          <div id='des-img' className="img-wrap">
-            <img src={info1} alt="" />
-            <img src={info2} alt="" />
-            <img src={info3} alt="" />
-            <img src={info4} alt="" />
-            <img src={info5} alt="" />
-          </div>
+      <div id='des-img' className="img-wrap">
+      <Swiper
+  modules={[Autoplay]}
+  spaceBetween={0}
+  slidesPerView={1}
+  autoplay={{
+    delay: 2000,
+    disableOnInteraction: false,
+  }}
+  speed={800}
+  loop={true}
+>
+  <SwiperSlide className="multi-slide">
+    <img src={info1} alt="" />
+    <img src={info2} alt="" />
+    <img src={info3} alt="" />
+    <img src={info4} alt="" />
+    <img src={info5} alt="" />
+  </SwiperSlide>
+  <SwiperSlide className="multi-slide">
+    <img src={info2} alt="" />
+    <img src={info3} alt="" />
+    <img src={info4} alt="" />
+    <img src={info5} alt="" />
+    <img src={info1} alt="" />
+  </SwiperSlide>
+  <SwiperSlide className="multi-slide">
+    <img src={info2} alt="" />
+    <img src={info5} alt="" />
+    <img src={info1} alt="" />
+    <img src={info3} alt="" />
+    <img src={info4} alt="" />
+  </SwiperSlide>
+  <SwiperSlide className="multi-slide">
+    <img src={info4} alt="" />
+    <img src={info1} alt="" />
+    <img src={info2} alt="" />
+    <img src={info5} alt="" />
+    <img src={info3} alt="" />
+  </SwiperSlide>
+</Swiper>
 
-          <div className="input-wrap">
-            <div className="input-text">
-              <h3>Join <span>98,641</span> Monthly Readers. Subscribe Today!</h3>
-            </div>
 
-            <div className="input">
-              <input type="email" placeholder='Email Address' />
-              <button>Subscribe</button>
-            </div>
-          </div>
-        </div>
+</div>
+
+
+  <div className="input-wrap">
+    <div className="input-text">
+      <h3>Join <span>98,641</span> Monthly Readers. Subscribe Today!</h3>
+    </div>
+
+    <div className="input">
+      <input type="email" placeholder='Email Address' />
+      <button>Subscribe</button>
+    </div>
+  </div>
+</div>
       </div>
     </div>
   )

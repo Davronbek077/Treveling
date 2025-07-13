@@ -35,7 +35,7 @@
 }
 
 .about-btn{
-    margin-top: 35px;
+    margin-top: 20px;
 }
 
 .about-btn a{
@@ -45,6 +45,13 @@
     padding: 16px 28px;
     text-decoration: none;
     color: white;
+    display: inline-block;
+    transition: all 0.2s ease;
+}
+
+.about-btn a:hover{
+    background-color: #2852fa;
+    transform: scale(1.05);
 }
 
 .categories{
@@ -203,7 +210,7 @@
 }
 
 .datails-btn{
-    margin-top: 48px;
+    margin-top: 25px;
 }
 
 .datails-btn a{
@@ -213,6 +220,13 @@
     text-decoration: none;
     background-color: #0336FF;
     color: white;
+    display: inline-block;
+    transition: all 0.2s ease;
+}
+
+.datails-btn a:hover{
+    background-color: #2852fa;
+    transform: scale(1.05);
 }
 
 .product-wrap{
@@ -287,6 +301,10 @@
     justify-content: center;
     margin-top: 30px;
     gap: 15px;
+}
+
+.touchs a{
+    text-decoration: none;
 }
 
 .touch{
@@ -463,6 +481,14 @@
     padding: 18px 28px;
     text-decoration: none;
     color: white;
+    display: inline-block;
+    transition: all 0.2s ease;
+}
+
+
+.purchase-btn a:hover{
+    background-color: #2852fa;
+    transform: scale(1.05);
 }
 
 .castle{
@@ -854,3 +880,37 @@
     }
   }
   
+  #des-img .swiper {
+    width: 100%;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    max-width: 1000px;
+    overflow: hidden;
+  }
+  
+  .multi-slide {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    padding: 10px 0;
+  }
+  
+  .multi-slide::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .multi-slide img {
+    flex-shrink: 0;
+    width: 200px;
+    height: auto;
+  }
+
+
+  @media screen and (max-width: 701px) {
+    .trevel-img iframe {
+        height: 280px;
+    }
+  }

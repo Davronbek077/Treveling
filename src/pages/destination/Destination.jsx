@@ -16,6 +16,12 @@ import desfooter2 from "../../assets/desfooter2.png"
 import desfooter3 from "../../assets/desfooter3.png"
 import desfooter4 from "../../assets/desfooter4.png"
 import desfooter5 from "../../assets/desfooter5.png"
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/autoplay';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 const Destination = () => {
   return (
@@ -37,11 +43,11 @@ const Destination = () => {
 
         <div className="destination-page">
             <ul>
-                <li><a href="#">South America</a></li>
-                <li><a href="#">North America</a></li>
-                <li><a id='small' href="#">Europe</a></li>
-                <li><a id='small' href="#">Africa</a></li>
-                <li><a id='small' href="#">Asia</a></li>
+                <li><button>South America</button></li>
+                <li><button>North America</button></li>
+                <li><button id='small'>Europe</button></li>
+                <li><button id='small'>Africa</button></li>
+                <li><button id='small'>Asia</button></li>
             </ul>
         </div>
 
@@ -300,11 +306,46 @@ const Destination = () => {
 
         <div className="info-wrapper">
           <div id='des-img' className="img-wrap">
-            <img src={desfooter1} alt="" />
-            <img src={desfooter2} alt="" />
-            <img src={desfooter3} alt="" />
-            <img src={desfooter4} alt="" />
-            <img src={desfooter5} alt="" />
+          <Swiper
+  modules={[Autoplay]}
+  spaceBetween={0}
+  slidesPerView={1}
+  autoplay={{
+    delay: 2000,
+    disableOnInteraction: false,
+  }}
+  speed={800}
+  loop={true}
+>
+  <SwiperSlide className="multi-slide">
+    <img src={desfooter1} alt="" />
+    <img src={desfooter2} alt="" />
+    <img src={desfooter3} alt="" />
+    <img src={desfooter4} alt="" />
+    <img src={desfooter5} alt="" />
+  </SwiperSlide>
+  <SwiperSlide className="multi-slide">
+    <img src={desfooter3} alt="" />
+    <img src={desfooter5} alt="" />
+    <img src={desfooter1} alt="" />
+    <img src={desfooter4} alt="" />
+    <img src={desfooter2} alt="" />
+  </SwiperSlide>
+  <SwiperSlide className="multi-slide">
+    <img src={desfooter4} alt="" />
+    <img src={desfooter2} alt="" />
+    <img src={desfooter5} alt="" />
+    <img src={desfooter1} alt="" />
+    <img src={desfooter3} alt="" />
+  </SwiperSlide>
+  <SwiperSlide className="multi-slide">
+    <img src={desfooter1} alt="" />
+    <img src={desfooter5} alt="" />
+    <img src={desfooter3} alt="" />
+    <img src={desfooter4} alt="" />
+    <img src={desfooter2} alt="" />
+  </SwiperSlide>
+</Swiper>
           </div>
 
           <div className="input-wrap">

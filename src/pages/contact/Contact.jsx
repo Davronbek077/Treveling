@@ -5,8 +5,12 @@ import info2 from "../../assets/info2.png"
 import info3 from "../../assets/info3.png"
 import info4 from "../../assets/info4.png"
 import info5 from "../../assets/info5.png"
-import info6 from "../../assets/info6.png"
-import info7 from "../../assets/info7.png"
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/autoplay';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 const Contact = () => {
 
@@ -41,14 +45,47 @@ const Contact = () => {
         </div>
 
         <div className="info-wrapper">
-          <div className="img-wrap">
-            <img src={info1} alt="" />
-            <img src={info2} alt="" />
-            <img src={info3} alt="" />
-            <img src={info4} alt="" />
-            <img src={info5} alt="" />
-            <img src={info6} alt="" />
-            <img src={info7} alt="" />
+          <div id='des-img' className="img-wrap">
+          <Swiper
+  modules={[Autoplay]}
+  spaceBetween={0}
+  slidesPerView={1}
+  autoplay={{
+    delay: 2000,
+    disableOnInteraction: false,
+  }}
+  speed={800}
+  loop={true}
+>
+  <SwiperSlide className="multi-slide">
+    <img src={info3} alt="" />
+    <img src={info4} alt="" />
+    <img src={info1} alt="" />
+    <img src={info2} alt="" />
+    <img src={info5} alt="" />
+  </SwiperSlide>
+  <SwiperSlide className="multi-slide">
+    <img src={info2} alt="" />
+    <img src={info1} alt="" />
+    <img src={info4} alt="" />
+    <img src={info5} alt="" />
+    <img src={info3} alt="" />
+  </SwiperSlide>
+  <SwiperSlide className="multi-slide">
+    <img src={info2} alt="" />
+    <img src={info4} alt="" />
+    <img src={info3} alt="" />
+    <img src={info5} alt="" />
+    <img src={info1} alt="" />
+  </SwiperSlide>
+  <SwiperSlide className="multi-slide">
+    <img src={info4} alt="" />
+    <img src={info1} alt="" />
+    <img src={info3} alt="" />
+    <img src={info5} alt="" />
+    <img src={info2} alt="" />
+  </SwiperSlide>
+</Swiper>
           </div>
 
           <div className="input-wrap">

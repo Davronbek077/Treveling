@@ -8,6 +8,7 @@ import Destination from './pages/destination/Destination'
 import Tips from './pages/tips/Tips'
 import Footer from './components/footer/Footer'
 import Contact from './pages/contact/Contact'
+import Sidebar from './sidebar/Sidebar'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -15,6 +16,7 @@ function App() {
   return (
     <>
       <Navbar/>
+      <Sidebar/>
       <Routes>
         <Route path="/" element={<Banner />} />
         <Route path="about" element={<About />} />

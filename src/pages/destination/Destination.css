@@ -40,15 +40,17 @@
     list-style: none;
 }
 
-.destination-page ul li a{
+.destination-page ul li button{
     border: 1px solid rgb(192, 192, 192);
     padding: 15px 25px;
     text-align: center;
     color: black;
     text-decoration: none;
+    background-color: white;
+    transition: all 0.2s ease;
 }
 
-.destination-page ul li a:focus{
+.destination-page ul li button:hover{
     background-color: #0336FF;
     color: white;
 }
@@ -164,7 +166,7 @@
   }
 
   @media screen and (max-width: 842px) {
-    .destination-page ul li a{
+    .destination-page ul li button{
       padding: 10px 20px;
     }
 
@@ -174,7 +176,7 @@
   }
 
   @media screen and (max-width: 702px) {
-    .destination-page ul li a{
+    .destination-page ul li button{
       padding: 10px 10px;
     }
 
@@ -215,7 +217,7 @@
   }
 
   @media screen and (max-width: 524px) {
-    .destination-page ul li a{
+    .destination-page ul li button{
       padding: 5px 5px;
       font-size: 14px;
     }
@@ -234,3 +236,38 @@
     }
   }
   
+  #des-img .swiper {
+    width: 100%;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    max-width: 1000px;
+    overflow: hidden;
+  }
+  
+  .multi-slide {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    padding: 10px 0;
+  }
+  
+  .multi-slide::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .multi-slide img {
+    flex-shrink: 0;
+    width: 200px;
+    height: auto;
+  }
+
+
+  @media screen and (max-width: 701px) {
+    .trevel-img iframe {
+        height: 280px;
+    }
+  }
+

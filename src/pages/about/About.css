@@ -330,3 +330,38 @@
     color: white;
     cursor: pointer;
 }
+
+#des-img .swiper {
+    width: 100%;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    max-width: 1000px;
+    overflow: hidden;
+  }
+  
+  .multi-slide {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    padding: 10px 0;
+  }
+  
+  .multi-slide::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .multi-slide img {
+    flex-shrink: 0;
+    width: 200px;
+    height: auto;
+  }
+
+
+  @media screen and (max-width: 701px) {
+    .trevel-img iframe {
+        height: 280px;
+    }
+  }
