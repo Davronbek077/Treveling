@@ -204,7 +204,7 @@ const Banner = () => {
             </div>
 
             <div className="touchs">
-            <a href="https://www.facebook.com/">
+            <a target='_blank' href="https://www.facebook.com/">
             <div id='facebook' className="touch">
               <div className="touch-img">
                 <img id='face' src={facebook} alt="" />
@@ -217,7 +217,7 @@ const Banner = () => {
             </div>
             </a>
             
-            <a href="https://x.com/">
+            <a target='_blank' href="https://x.com/">
             <div id='twitter' className="touch">
               <div className="touch-img">
                 <img src={twitter} alt="" />
@@ -231,7 +231,7 @@ const Banner = () => {
             </a>
             </div>
             <div className="touchs">
-            <a href="https://www.youtube.com/">
+            <a target='_blank' href="https://www.youtube.com/">
             <div id='youtube'  className="touch">
               <div className="touch-img">
                 <img id='you' src={youtube} alt="" />
@@ -244,7 +244,7 @@ const Banner = () => {
             </div>
             </a>
 
-            <a href="https://www.instagram.com/">
+            <a target='_blank' href="https://www.instagram.com/">
             <div id='instagram' className="touch">
               <div className="touch-img">
                 <img id='insta' src={instagram} alt="" />
